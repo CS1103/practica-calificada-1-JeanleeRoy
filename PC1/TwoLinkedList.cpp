@@ -21,34 +21,30 @@ UTEC::TwoLinkedList::~TwoLinkedList(){
     }
 }
 void UTEC::TwoLinkedList::push_back1(int value) {
-    if (head1 != nullptr){
-        Node* temp = new Node(value);
-        if (head1->next== nullptr){
-            head1 = temp;
-            tail1 = temp;
-        } else if (tail1->next == nullptr){
-            tail1->next = temp;
-            tail1 = temp;
-        } else {
-            tail->next =temp;
-            tail = temp;
-        } delete temp;
+    Node* temp = new Node(value);
+    if (head1 == nullptr){
+        head1 = temp;
+        tail1 = temp;
+    } else if (tail1->next == nullptr){
+        tail1->next = temp;
+        tail1 = temp;
+    } else {
+        tail->next =temp;
+        tail = temp;
     }
 }
 
 void UTEC::TwoLinkedList::push_back2(int value) {
-    if (head2 != nullptr){
-        Node* temp = new Node(value);
-        if (head2->next== nullptr){
-            head2 = temp;
-            tail2 = temp;
-        } else if (tail2->next == nullptr){
-            tail2->next = temp;
-            tail2 = temp;
-        } else {
-            tail->next =temp;
-            tail = temp;
-        } delete temp;
+    Node* temp = new Node(value);
+    if (head2->next== nullptr){
+        head2 = temp;
+        tail2 = temp;
+    } else if (tail2->next == nullptr){
+        tail2->next = temp;
+        tail2 = temp;
+    } else {
+        tail->next =temp;
+        tail = temp;
     }
 }
 std::string UTEC::TwoLinkedList::merge(int value) {
